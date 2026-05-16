@@ -45,13 +45,18 @@ npm run dev
 ## 🖼️ Capturas
 
 ### Formulario de Ingreso de Paciente
+
 <img width="867" height="666" alt="fronted agente ia" src="https://github.com/user-attachments/assets/cf198a96-bc65-4ba8-9126-1b7cdd7b22f8" />
 
+### Envio de Correo 
+
+<img width="1349" height="267" alt="mails " src="https://github.com/user-attachments/assets/0daf2738-f0ad-43be-970e-983ece597bb6" />
+
 ### Notificación de Correo Enviada
+
 <!-- ARRASTRA AQUÍ LA IMAGEN DEL CORREO RECIBIDO -->
 <img width="1043" height="509" alt="notificacion back" src="https://github.com/user-attachments/assets/c3f3663b-be68-4e97-938d-cff49f951694" />
 <img width="877" height="503" alt="emergencia bac" src="https://github.com/user-attachments/assets/b13e0b5c-5218-4445-9351-b59f24ffd89e" />
-
 
 ## 🚀 Deploy
 Ambos servicios en Railway (automático desde GitHub)
