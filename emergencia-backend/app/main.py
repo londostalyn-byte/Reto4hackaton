@@ -5,6 +5,7 @@ logging.getLogger("watchfiles").setLevel(logging.ERROR)
 logging.getLogger("watchfiles.main").setLevel(logging.ERROR)
 logging.getLogger("watchfiles.run").setLevel(logging.ERROR)
 
+
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
