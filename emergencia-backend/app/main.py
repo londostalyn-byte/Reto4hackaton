@@ -87,6 +87,6 @@ if __name__ == "__main__":
         "app.main:app",
         host="0.0.0.0",
         port=int(os.getenv("PORT", 8000)),
-        reload=False
+        reload=False,
         reload_excludes=["logs/*", "*.log", "*.db", "logs/"],
     )
