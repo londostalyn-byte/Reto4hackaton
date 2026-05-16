@@ -32,17 +32,21 @@ app_logger = get_logger("main")
 async def lifespan(app: FastAPI):
     app_logger.info("Iniciando aplicación...")
     
-    # Crear tablas
-    init_db()
-    app_logger.info("Base de datos inicializada")
-    
-    # Poblar datos de prueba
     try:
-        from data.seed import populate_database
-        populate_database()
-        app_logger.info("Datos de prueba cargados")
+        # Crear tablas
+        init_db()
+        app_logger.info("Base de datos inicializada")
+        
+        # Poblar datos de prueba
+        try:
+            from data.seed import populate_database
+            populate_database()
+            app_logger.info("Datos de prueba cargados")
+        except Exception as e:
+            app_logger.warning(f"No se pudieron cargar datos: {str(e)}")
+    
     except Exception as e:
-        app_logger.warning(f"No se pudieron cargar datos: {str(e)}")
+        app_logger.error(f"Error inicializando BD: {str(e)}", exc_info=True)
     
     yield
     app_logger.info("Apagando aplicación...")
