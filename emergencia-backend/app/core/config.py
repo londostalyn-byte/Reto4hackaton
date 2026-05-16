@@ -50,10 +50,11 @@ class Settings(BaseSettings):
 
     # CORS
     cors_origins: list = [
-        "http://localhost:3000",
-        "http://localhost:8000",
-        "http://localhost",
-    ]
+    "http://localhost:3000",
+    "http://localhost:8000",
+    "http://localhost",
+    "https://emergencia-fronted.up.railway.app",
+]
 
     # LOGGING
     log_level: str = "INFO"
