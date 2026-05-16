@@ -79,8 +79,8 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
         "app.main:app",
-        host="localhost",
-        port=8000,
+        host="0.0.0.0",
+        port=int(os.getenv("PORT", 8000)),
         reload=settings.debug,
         reload_excludes=["logs/*", "*.log", "*.db", "logs/"],
     )
