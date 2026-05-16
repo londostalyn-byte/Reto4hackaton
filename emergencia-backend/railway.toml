@@ -2,4 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "python -m app.main"
+startCommand = "python init_db.py && python -m app.main"
+
+[nixpacks]
+pkgs = ["gcc", "stdenv.cc.cc.lib"]
