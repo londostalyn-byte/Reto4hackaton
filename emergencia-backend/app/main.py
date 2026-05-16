@@ -1,3 +1,4 @@
+import os
 import logging
 
 logging.getLogger("watchfiles").setLevel(logging.ERROR)
