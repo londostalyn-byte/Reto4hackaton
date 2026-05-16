@@ -83,10 +83,16 @@ async def health():
 
 if __name__ == "__main__":
     import uvicorn
+    import sys
+    
+    port = int(os.getenv("PORT", 8000))
+    app_logger.info(f"Starting server on port {port}")
+    
     uvicorn.run(
         "app.main:app",
         host="0.0.0.0",
-        port=int(os.getenv("PORT", 5000)),
+        port=port,
         reload=False,
         reload_excludes=["logs/*", "*.log", "*.db", "logs/"],
+        log_level="info",
     )
